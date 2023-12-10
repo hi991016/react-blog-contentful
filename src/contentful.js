@@ -11,6 +11,8 @@ const getSinglePost = (slug) =>
     .getEntries({
       "fields.blogSlug": slug,
       content_type: "blog",
+      // locale: "ja-JP",
+      // locate: "en-US",
     })
     .then((response) => response.items);
 

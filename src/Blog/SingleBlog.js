@@ -33,6 +33,18 @@ const SingleBlog = () => {
                       height="291"
                     />
                     <h2 className="post-title pt-3">{post?.blogTitle}</h2>
+
+                    {post.cloud?.map((event) => (
+                      <img
+                        src={event.secure_url}
+                        title={post?.fields?.blogTitle}
+                        alt=""
+                        width="578"
+                        height="291"
+                        loading="lazy"
+                      />
+                    ))}
+
                     <p className="post-meta">
                       By{" "}
                       <a
